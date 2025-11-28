@@ -43,23 +43,25 @@ A comprehensive Python-based Object-Oriented Programming (OOP) project to manage
 
 ## 🚀 How to Run
 
-```bash
+``bash
 python StudentManagement1.py
 
 
-##💡 Key Concepts Demonstrated
-Inheritance: Student and Teacher inherit from Person
-Encapsulation: Private salary attribute with validation
-Data Validation: Course capacity limits, salary checks
-Composition: School manages multiple entities
+## 💡 Key Concepts Demonstrated
+- **Inheritance:** `Student` and `Teacher` classes extend a common `Person` base class
+- **Encapsulation:** Private attributes like salary are protected with proper getters/setters
+- **Data Validation:** Built-in checks such as course capacity limits and salary validation
+- **Composition:** `School` class manages students, teachers, and courses as a structured system
 
-##🎯 Future Enhancements
-Add database integration (SQLite)
-Create GUI interface
-Export reports to PDF
-Add attendance tracking
+## 🎯 Future Enhancements
+- Integrate with a **SQLite database** for persistent data
+- Add a **GUI interface** (Tkinter / PyQt)
+- Enable **PDF report generation**
+- Implement **attendance tracking** and analytics
 
-##👨‍💻 Author
-Shreyas Kesarkar
+## 👨‍💻 Author
+**Shreyas Kesarkar**
 
-⭐ If you found this project helpful, please give it a star!
+⭐ If you found this project helpful, consider giving it a star!
+
+
