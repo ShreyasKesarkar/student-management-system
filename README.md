@@ -43,8 +43,9 @@ A comprehensive Python-based Object-Oriented Programming (OOP) project to manage
 
 ## 🚀 How to Run
 
-``bash
+```bash
 python StudentManagement1.py
+```
 
 
 ## 💡 Key Concepts Demonstrated
