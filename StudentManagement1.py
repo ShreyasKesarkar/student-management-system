@@ -18,7 +18,7 @@ class Student(Person):
         self.grades = grades if grades is not None else {}
         
     def enroll_course(self, course):
-        self.enrolled_courses.append(course. course_name)  # ✅ Store course name
+        self.enrolled_courses.append(course. course_name)  
     
     def add_grade(self, course_code, grade):
         self.grades[course_code] = grade
@@ -27,15 +27,15 @@ class Student(Person):
         gpa_dct = {"A": 4.0, "B": 3.0, "C": 2.0, "D": 1.0, "F": 0.0}
         
         if len(self.grades) == 0:
-            return 0.0  # ✅ Return number, not string
+            return 0.0  
         
         total = 0
         for grade in self.grades.values():
-            total += gpa_dct.get(grade, 0)  # ✅ Safe lookup
+            total += gpa_dct.get(grade, 0) 
         return total / len(self.grades)
     
     def get_enrolled_courses(self):
-        return self.enrolled_courses  # ✅ Just return the list
+        return self.enrolled_courses  
     
     
 class Teacher(Person):
@@ -46,7 +46,7 @@ class Teacher(Person):
         self.__salary = salary
         
     def get_salary(self):
-        return self.__salary  # ✅ Just return the number
+        return self.__salary 
     
     def set_salary(self, new_salary):
         if new_salary > 0:
@@ -70,17 +70,17 @@ class Course():
     def add_student(self, student):
         if len(self. enrolled_students) < self.max_students:
             self.enrolled_students.append(student)
-            return f'{student. name} is enrolled in {self. course_name}'  # ✅ Use student. name
+            return f'{student. name} is enrolled in {self. course_name}' 
         return "The capacity of enrolled students is full"
     
     def remove_student(self, student):
         if student in self.enrolled_students:
             self.enrolled_students.remove(student)
-            return f'The student {student.name} is removed'  # ✅ Use student. name
+            return f'The student {student.name} is removed'  
         return "Student not found in this course"
         
     def get_student_count(self):
-        return len(self.enrolled_students)  # ✅ Just return number
+        return len(self.enrolled_students)  
     
     def get_course_info(self):
         return f'Course: {self.course_name} ({self.course_code})\nTeacher: {self.teacher. name}\nEnrolled: {self.get_student_count()}/{self.max_students}'
@@ -109,20 +109,20 @@ class School():
     def find_student_by_id(self, student_id):
         for student in self. students:
             if student.student_id == student_id:
-                return student  # ✅ Return the object itself
+                return student  
         return None
     
     def find_teacher_by_id(self, employee_id):
         for teacher in self.teachers:
             if teacher.employee_id == employee_id:
-                return teacher  # ✅ Return the object itself
+                return teacher 
         return None
     
     def get_all_students(self):
-        return [student.name for student in self. students]  # ✅ Return list
+        return [student.name for student in self. students]  
     
     def get_all_courses(self):
-        return [course.course_name for course in self.courses]  # ✅ Return list
+        return [course.course_name for course in self.courses]  
             
     def get_school_stats(self):
         return f'Total Students: {len(self. students)}\nTotal Teachers: {len(self.teachers)}\nTotal Courses: {len(self.courses)}'
@@ -302,4 +302,5 @@ if __name__ == "__main__":
     
     print("\n" + "=" * 60)
     print("DEMO COMPLETE!")
+
     print("=" * 60)
